@@ -14,6 +14,7 @@ Route::get('/', [AuthController::class, 'index'])->name('auth.index');
 Route::post('signin', [AuthController::class, 'signIn'])->name('signIn');
 Route::post('logout', [AuthController::class, 'logout'])->name('logout');
 Route::get('dashboard', [DashboardController::class, 'index'])->name('dashboard.index');
+Route::get('dashboard-view', [DashboardController::class, 'view'])->name('dashboard.view');
 
 Route::prefix('roles')->group(function () {
     Route::get('/', [RolesController::class, 'index'])->name('roles.index');
